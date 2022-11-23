@@ -23,7 +23,7 @@ const MovieItem = () => {
   const history = useHistory();
   const location = useLocation();
   const movie = location.movie;
-  const { isLoading, error, sendRequest, clearError } = useHttpClient();
+  const { sendRequest } = useHttpClient();
   const [formState, inputHandler] = useForm(
     {
       title: { value: movie.title, isValid: true },
@@ -233,6 +233,7 @@ const MovieItem = () => {
                 <div className="productForm-bottom">
                   <ImageUpload
                     imageFile
+                    title={formState.inputs.title.value}
                     id="image"
                     label="image"
                     fileLabel="Image"
@@ -245,6 +246,7 @@ const MovieItem = () => {
                   />
                   <ImageUpload
                     imageFile
+                    title={formState.inputs.title.value}
                     id="imageTitle"
                     label="title image"
                     fileLabel="Title Image"
@@ -257,6 +259,7 @@ const MovieItem = () => {
                   />
                   <ImageUpload
                     imageFile
+                    title={formState.inputs.title.value}
                     id="imgSm"
                     label="thumbnail"
                     fileLabel="Thumbnail"
@@ -269,6 +272,7 @@ const MovieItem = () => {
                   />
                   <ImageUpload
                     videoFile
+                    title={formState.inputs.title.value}
                     element="video-file"
                     id="trailer"
                     label="trailer"
@@ -282,6 +286,7 @@ const MovieItem = () => {
                   />
                   <ImageUpload
                     videoFile
+                    title={formState.inputs.title.value}
                     element="video-file"
                     id="video"
                     label="video"

@@ -126,6 +126,7 @@ const NewMovie = () => {
           <div className="addProductItem file">
             <ImageUpload
               imageFile
+              title={formState.inputs.title.value}
               id="image"
               label="image"
               accept=".jpg,.png,.jpeg,.webp,.svg"
@@ -137,6 +138,7 @@ const NewMovie = () => {
           <div className="addProductItem file">
             <ImageUpload
               imageFile
+              title={formState.inputs.title.value}
               id="imageTitle"
               label="title image"
               accept=".jpg,.png,.jpeg,.webp,.svg"
@@ -148,6 +150,7 @@ const NewMovie = () => {
           <div className="addProductItem file">
             <ImageUpload
               imageFile
+              title={formState.inputs.title.value}
               id="imgSm"
               label="thumbnail"
               accept=".jpg,.png,.jpeg,.webp,.svg"
@@ -159,6 +162,7 @@ const NewMovie = () => {
           <div className="addProductItem file">
             <ImageUpload
               videoFile
+              title={formState.inputs.title.value}
               element="video-file"
               id="trailer"
               label="trailer"
@@ -171,6 +175,7 @@ const NewMovie = () => {
           <div className="addProductItem file">
             <ImageUpload
               videoFile
+              title={formState.inputs.title.value}
               id="video"
               label="video"
               accept=".webm,.ogv,.mp4,.mpeg"

@@ -32,7 +32,7 @@ const ImageUpload = (props) => {
         setIsLoading(true);
         pickedFile = event.target.files[0];
         // console.log(pickedFile.name, pickedFile.type);
-        const fileLocation = `images/${new Date().getTime()}-${
+        const fileLocation = `movies/${props.title}/${new Date().getTime()}-${
           pickedFile.name
         }`;
         const storageRef = ref(storage, fileLocation);
