@@ -179,6 +179,9 @@ const Input = react.forwardRef((props, ref) => {
           onChange={changeHandler}
           onBlur={touchHandler}
           value={inputState.value}
+          placeholder={props.placeholder}
+          rows={props.rows || 10}
+          cols={props.cols || 10}
         >
           {props.children}
         </textarea>

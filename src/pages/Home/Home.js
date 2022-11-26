@@ -32,19 +32,19 @@ const Home = () => {
     []
   );
   const [userStats, setUserStats] = useState([]);
-  const { isLoading, error, sendRequest, clearError } = useHttpClient();
+  const { isLoading, sendRequest } = useHttpClient();
   useEffect(() => {
-    const fetchUserStats = async () => {
+    const fetchMonthlyStats = async () => {
       try {
         let responseData = await sendRequest(
-          `${process.env.REACT_APP_BACKEND_URL}/users/stats`,
+          `${process.env.REACT_APP_BACKEND_URL}/users/monthlyStats`,
           "GET",
           null,
           {
             Authorization: `Bearer ${token}`,
           }
         );
-        responseData = responseData.userStats.sort((a, b) => {
+        responseData = responseData.monthlyStats.sort((a, b) => {
           return a._id - b._id;
         });
         // console.log(responseData);
@@ -59,7 +59,7 @@ const Home = () => {
         );
       } catch (error) {}
     };
-    fetchUserStats();
+    fetchMonthlyStats();
   }, [sendRequest, token, MONTHS]);
   return (
     <div className="home-container">

@@ -1,6 +1,9 @@
 import React, { Fragment } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
+import { useAuth } from "./shared/hooks/auth-hook";
+
+import Login from "./pages/Login/SigninForm";
 import MainNavigation from "./shared/components/Navigation/MainNavigation/MainNavigation";
 import SideBar from "./shared/components/Navigation/SideBar/SideBar";
 import Home from "./pages/Home/Home";
@@ -17,16 +20,12 @@ import MovieList from "./pages/MovieList/MovieList";
 import MovieItem from "./pages/Movie/MovieItem";
 import NewMovie from "./pages/NewMovie/NewMovie";
 
-import Login from "./pages/Login/SigninForm";
-import { useSelector } from "react-redux";
-
 import "./App.scss";
 
 function App() {
-  const token = useSelector((state) => state.auth.token);
-  const isAdmin = useSelector((state) => state.auth.user?.isAdmin);
+  const { isLoggedIn, isAdmin } = useAuth();
   let routes;
-  if (token && isAdmin) {
+  if (isLoggedIn && isAdmin) {
     routes = (
       <Fragment>
         <MainNavigation />

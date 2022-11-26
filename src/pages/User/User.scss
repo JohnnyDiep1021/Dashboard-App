@@ -78,53 +78,32 @@
         font-weight: 600;
       }
       & .user-update-form {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 2rem;
-        & .left {
-          & .user-update-item {
-            display: flex;
-            flex-direction: column;
-            margin-top: 1rem;
-            & label {
-              margin-bottom: 0.5rem;
-              font-size: 1.4rem;
-            }
-            & .user-update-input {
-              border: none;
-              width: 25rem;
-              height: 3rem;
-              border-bottom: 0.1rem solid gray;
-            }
-          }
-        }
-        & .right {
+        & .inputUpdateForm-container {
           display: flex;
-          flex-direction: column;
           justify-content: space-between;
-          & .user-update-upload {
-            display: flex;
-            align-items: center;
-            & .user-update-img {
-              width: 10rem;
-              height: 10rem;
-              border-radius: 1rem;
-              object-fit: cover;
-              margin-right: 2rem;
-            }
-            & .user-update-icon {
-              font-size: 2rem;
-              cursor: pointer;
+          margin: 2rem 0;
+          & .left {
+            width: 40%;
+            & .user-update-item {
+              display: flex;
+              flex-direction: column;
+              margin-top: 1rem;
+              & label {
+                margin-bottom: 0.5rem;
+                font-size: 1.4rem;
+              }
+              & .user-update-input {
+                border: none;
+                width: 25rem;
+                height: 3rem;
+                border-bottom: 0.1rem solid gray;
+              }
             }
           }
-          & .user-update-btn {
-            border-radius: 0.5rem;
-            border: none;
-            padding: 0.5rem;
-            cursor: pointer;
-            background-color: darkblue;
-            color: white;
-            font-weight: 600;
+          & .right {
+            width: 40%;
+            display: flex;
+            justify-content: center;
           }
         }
       }

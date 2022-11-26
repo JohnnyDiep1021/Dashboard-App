@@ -98,6 +98,7 @@
               &:-webkit-autofill:active {
                 border: transparent;
                 border-bottom: 1px solid rgb(161, 161, 161);
+                -webkit-background-clip: text;
                 background-clip: text;
               }
             }
@@ -118,19 +119,6 @@
           display: flex;
           flex-direction: column;
           gap: 4rem;
-        }
-        & .btn-update {
-          color: white;
-          background-color: rgb(35, 35, 245);
-          // text-transform: capitalize;
-          align-self: center;
-          font-weight: 600;
-          padding: 1rem 4rem;
-          border-radius: 0.8rem;
-          cursor: pointer;
-          &:hover {
-            background-color: rgb(15, 15, 185);
-          }
         }
       }
     }

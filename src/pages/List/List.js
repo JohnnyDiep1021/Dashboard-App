@@ -26,7 +26,7 @@ const List = () => {
             Authorization: `Bearer ${token}`,
           }
         );
-        console.log(responseData.lists);
+        // console.log(responseData.lists);
         dispatch(listsAction.setLists(responseData.lists));
       } catch (error) {}
     };

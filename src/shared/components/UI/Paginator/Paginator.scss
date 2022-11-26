@@ -1,0 +1,28 @@
+.paginator {
+  position: relative;
+  & .paginator__controls {
+    display: flex;
+    justify-content: center;
+  }
+
+  & .paginator__control {
+    width: 7rem;
+    padding: 0.5rem;
+    margin: 0 1rem;
+    border: 1px solid rgb(116, 116, 116);
+    font-size: 1.4rem;
+    background: transparent;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: 0.25s all;
+    &:hover,
+    &:active {
+      color: #fff;
+      border-color: #fff;
+      background-color: var(--primary-color-light);
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

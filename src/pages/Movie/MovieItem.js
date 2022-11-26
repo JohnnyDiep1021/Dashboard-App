@@ -304,7 +304,7 @@ const MovieItem = () => {
                   className="btn btn-update"
                   disabled={!formState.isValid}
                 >
-                  Update Movie
+                  Update
                 </Button>
               </form>
             </div>

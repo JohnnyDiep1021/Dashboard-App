@@ -43,8 +43,14 @@ const Login = (props) => {
         }),
         { "Content-Type": "application/json" }
       );
-      console.log(responseData);
-      dispatch(authAction.login(responseData));
+      // console.log(responseData);
+      dispatch(
+        authAction.login({
+          token: responseData.token.token,
+          userId: responseData.user.id,
+          isAdmin: responseData.user.isAdmin,
+        })
+      );
     } catch (error) {}
   };
 
@@ -53,7 +59,13 @@ const Login = (props) => {
       <div className="login-container">
         <form className="form-regis signin" onSubmit={signinSubmitHandler}>
           {isLoading && (
-            <LoadingSpinner asOverlay style={{ borderRadius: "10px" }} />
+            <LoadingSpinner
+              asOverlay
+              style={{
+                borderRadius: "10px",
+                background: "rgba(124, 120, 120, 0.5)",
+              }}
+            />
           )}
           <div className="heading">
             <h3 className="heading__title">Login to Dashboard</h3>

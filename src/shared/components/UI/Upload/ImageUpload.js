@@ -32,9 +32,16 @@ const ImageUpload = (props) => {
         setIsLoading(true);
         pickedFile = event.target.files[0];
         // console.log(pickedFile.name, pickedFile.type);
-        const fileLocation = `movies/${props.title}/${new Date().getTime()}-${
-          pickedFile.name
-        }`;
+        let fileLocation;
+        if (props.userUpload) {
+          fileLocation = `users/${props.title}/${new Date().getTime()}-${
+            pickedFile.name
+          }`;
+        } else {
+          fileLocation = `movies/${props.title}/${new Date().getTime()}-${
+            pickedFile.name
+          }`;
+        }
         const storageRef = ref(storage, fileLocation);
         const uploadTask = uploadBytesResumable(storageRef, pickedFile);
         uploadTask.on(
@@ -119,7 +126,7 @@ const ImageUpload = (props) => {
   return (
     <react.Fragment>
       {error && <ErrorModal error={error} content="" onClose={clearError} />}
-      <div>
+      <div className="fileUpload-container">
         {previewUrl && (
           <label htmlFor={props.id} className="file-label">
             {props.fileLabel}
@@ -141,7 +148,11 @@ const ImageUpload = (props) => {
           >
             {isLoading && <LoadingSpinner asOverlay />}
             {previewUrl && props.imageFile && (
-              <img src={previewUrl} alt={`${props.label} Preview`} />
+              <img
+                src={previewUrl}
+                alt={`${props.label} Preview`}
+                style={props.ImgFileStyle}
+              />
             )}
             {previewUrl && props.videoFile && (
               <video src={previewUrl} alt="Video Preview" controls autoPlay />

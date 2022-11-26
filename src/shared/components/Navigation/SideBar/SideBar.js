@@ -1,11 +1,6 @@
 import React from "react";
 
-import {
-  AddCircle,
-  PlayCircleOutline,
-  AddCircleOutline,
-  List,
-} from "@mui/icons-material";
+import { PlayCircleOutline, List } from "@mui/icons-material";
 import {
   Home,
   Sale,

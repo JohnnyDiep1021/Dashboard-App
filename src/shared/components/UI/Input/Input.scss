@@ -16,7 +16,8 @@
   }
 }
 .input input,
-.input select {
+.input select,
+.input textarea {
   display: inline-block;
   margin-left: 0.5rem;
   width: 100%;
@@ -26,12 +27,18 @@
   border-radius: 6px;
 }
 
+.input textarea {
+  resize: vertical;
+  height: 15rem;
+  // font-size: 1.2rem;
+}
 .input .select {
   height: 10rem;
 }
 
 .input input:focus,
-.input select:focus {
+.input select:focus,
+.input textarea:focus {
   outline: none;
   border: 2px solid var(--primary-color);
   background-color: #fff;
@@ -42,11 +49,13 @@
 }
 
 .input input,
-.input select {
+.input select,
+.input textarea {
   margin-bottom: 1rem;
 }
 
-.invalid input {
+.invalid input,
+.invalid textarea {
   border-color: rgb(231, 7, 7);
   background: #fbdada;
 }
@@ -63,6 +72,7 @@
   margin-bottom: 0.5rem;
 }
 
-.invalid input {
+.invalid input,
+.invalid textarea {
   margin-bottom: 0;
 }

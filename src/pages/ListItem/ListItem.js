@@ -51,7 +51,7 @@ const MovieItem = () => {
           Authorization: `Bearer ${token}`,
         }
       );
-      console.log(responseData.movies);
+      // console.log(responseData.movies);
       setMoviesContent(responseData.movies);
     };
     fetchMoviesContent();
@@ -74,7 +74,7 @@ const MovieItem = () => {
           "Content-Type": "application/json",
         }
       );
-      console.log(updatedList.list);
+      // console.log(updatedList.list);
       history.push("/lists");
     } catch (error) {}
   };

@@ -232,7 +232,7 @@ const NewMovie = () => {
             <Input
               element="input"
               id="duration"
-              type="text"
+              type="number"
               label="Duration"
               validators={[VALIDATOR_REQUIRE()]}
               errorText="duration is required (in minutes)"
