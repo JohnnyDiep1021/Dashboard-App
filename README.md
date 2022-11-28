@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+<div align="center">
+  <h1> <img src="https://github.com/JohnnyDiep1021/Netflix-Clone-App/blob/main/Frontend/img/netflix-logo48.png?raw=true" alt="Netflix logo"/> Dashboard App</h1>
+  <strong>A nearly perfect clone version of the most popular movie platform in web browser</strong><br>
+</div>
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Why build this project?
+Inspired by the official movie web app - Netflix, [Netflix Clone App](https://netflix-lover-jd.web.app/) was built with a stunning UI and all the fundamental functionalities of a movie app. It was incorporated all the underlying traits of a responsive full-stack MERN application and only used as a personal project. This app is completely responsive and compatible with all digital devices from mobiles to computers. Compared to Netflix, *Netflix Clone App* is **FREE**, but can still guarantee the users will have the joyful experiences (UX) to explore all movie features of the true Netflix app.
 
-## Available Scripts
+## Features
+This app is constructed with all basic Netflix's features:
+1. Register for a new Netflix account or sign in for an existing one by using email/ username and password (with detailed input prompts).
+2. Search engine
+3. Self-customize user account information:
+   + Upload profile image
+   + Update personal data (name, bio, username)
+4. Switch between a different movie genre
+5. Add movies to the "My List".
+6. Register for a premium membership step-by-step through the simulated payment process
+7. Play movies
+8. Auto account login/ logout (expired in 1 day)
 
-In the project directory, you can run:
+## How to use?
+To new users, there are 2/two ways to get started before using the **Netflix Clone App**:
+  1. Use **default account** with username **"userTest"** - password **"Test@123"**
+  2. Register **new accounnt** with user-defined email/username and password
 
-### `npm start`
+After signing up successfully, explore all the app features and enjoy watching movies.
+  
+## Technologies
+1) ### Frontend:
+- **Netflix Clone App** is a single-page application (SPA), constructed from ReactJS. Using:
+  + **Custom hooks** manages form data input, sending requests, authentication, and movie interactivities.
+  + **react-router-dom** is used to simulate multi-page applications.
+  + **react-transition-group** for modal, popup animations.
+  + **reduxjs/toolkit**, **react-redux** creates stores to manage data across the application.
+  + **react-stripe-checkout** for payment process
+  + **sass** is used for styles and decorations.
+  + **mui/material** for icons and tooltips.
+  + **firebase** for file upload.
+- **The user interface** is inspired and replicated from the official Netflix site:
+  + Each movie showcase can be hovered and then poped up. The pop-up window will display movie trailer and a vast interactive button (play, add to "My List", like, dislike, and expand for more detailed movie description)
+  + The movies list's design is built with many scrollable carrousels. 
+  + The movie items in the watch list are designed based on the video items framework saved in the playlist on Youtube .
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2) ### Backend:
+- Featured by RESTful APIs and implemented by MongoDB, ExpressJs, and NodeJs. Using:
+  + **mongodb**, **mongoose** for user data storage.
+  + **cors** for setting up cross-site resource sharing permissions.
+  + **express** for building web framework, **express-validator** for handling and validating input data sent from client-side.
+  + **body-parser** for parsing request data.
+  + **helmet** for setting up header security.
+  + **jsonwebtoken**, **bcrypt** for creating authToken and hashing user's password.
+  + **validator** for validating input data into mongoose schema.
+  + **stripe** for handling payment payment
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## What needs to be improved?
+- Although **Netflix Clone App** is usable, accessible and useful, there are still some features that can be improved and enhanced:
+  +  Speed up application loading process.
+  +  The movie carrousels can be optimized to be scrolled smoother and infinitely instead of leaving a blank space after scrolling to the end.
+  +  A more secure way to store user data (token, userId,...) used for auto-login/ logout instead of storing it in easily-mutable local storage.
+  +  More configurations and settings for the quality of movies.
+  +  Additional feature for cross-site sharing account.
+  +  Authentic payment.
+## Closing notes
+For more realistic experience and vivid imagination, please spend time exploring and playing around with the [Netflix Clone App](https://netflix-lover-jd.web.app/). Enjoy :blush:! 
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*I welcome all user's feedbacks and reviews. Your contributions can help me to grow better. Thank you :handshake:!*
