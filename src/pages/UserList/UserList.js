@@ -103,7 +103,7 @@ const UserList = () => {
         Authorization: `Bearer ${token}`,
       }
     );
-    console.log(responseData);
+    console.log(responseData.message);
     if (responseData.isDeleted) {
       setUserData((prevState) => prevState.filter((data) => data.id !== id));
     }

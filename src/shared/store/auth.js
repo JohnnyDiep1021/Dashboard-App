@@ -14,27 +14,29 @@ const authSlice = createSlice({
   reducers: {
     login(state, action) {
       // console.log(action.payload);
-      state.userId = action.payload.userId;
-      state.token = action.payload.token;
-      state.isLoggedIn = !!action.payload.token;
-      state.isAdmin = action.payload.isAdmin;
-      const tokenExpDate = action.payload.expTime
-        ? new Date(action.payload.expTime)
-        : new Date(new Date().getTime() + 1000 * 60 * 55);
-      state.tokenExpDate = tokenExpDate.getTime();
-      localStorage.setItem(
-        "userData",
-        JSON.stringify({
-          token: action.payload.token,
-          expTime: tokenExpDate.toISOString(),
-          isAdmin: action.payload.isAdmin,
-          userId: action.payload.userId,
-        })
-      );
+      if (action.payload.isAdmin) {
+        state.userId = action.payload.userId;
+        state.token = action.payload.token;
+        state.isLoggedIn = !!action.payload.token;
+        state.isAdmin = action.payload.isAdmin;
+        const tokenExpDate = action.payload.expTime
+          ? new Date(action.payload.expTime)
+          : new Date(new Date().getTime() + 1000 * 60 * 55);
+        state.tokenExpDate = tokenExpDate.getTime();
+        localStorage.setItem(
+          "userData",
+          JSON.stringify({
+            token: action.payload.token,
+            expTime: tokenExpDate.toISOString(),
+            isAdmin: action.payload.isAdmin,
+            userId: action.payload.userId,
+          })
+        );
+        console.log(`Logged in!`);
+      }
       // console.log(
       //   `token: ${state.token}; expDate: ${state.tokenExpDate}; userId: ${state.userId}; isLoggedIn: ${state.isLoggedIn}; watchlist: ${state.watchlist.length}`
       // );
-      console.log(`Logged in!`);
     },
     logout(state) {
       state.userId = null;
