@@ -47,6 +47,22 @@ const MovieItem = () => {
         value: movie.limit,
         isValid: true,
       },
+      casting: {
+        value: movie.casting,
+        isValid: true,
+      },
+      label: {
+        value: movie.label,
+        isValid: true,
+      },
+      warning: {
+        value: movie.warning,
+        isValid: true,
+      },
+      matching: {
+        value: movie.matching,
+        isValid: true,
+      },
       isSeries: {
         value: `${movie.isSeries}`,
         isValid: true,
@@ -77,7 +93,7 @@ const MovieItem = () => {
   const submitUpdateHandler = async (e) => {
     e.preventDefault();
     try {
-      console.log(formState.inputs);
+      // console.log(formState.inputs);
       const updatedMovie = await sendRequest(
         `${process.env.REACT_APP_BACKEND_URL}/movies/${movie._id}`,
         "PATCH",
@@ -115,7 +131,7 @@ const MovieItem = () => {
           "Content-Type": "application/json",
         }
       );
-      console.log(updatedMovie.movie);
+      // console.log(updatedMovie.movie);
       history.push("/movies");
     } catch (error) {}
   };
@@ -148,10 +164,7 @@ const MovieItem = () => {
                       id="title"
                       type="text"
                       label="Title"
-                      validators={[
-                        VALIDATOR_MINLENGTH(8),
-                        VALIDATOR_MAXLENGTH(191),
-                      ]}
+                      validators={[VALIDATOR_MAXLENGTH(191)]}
                       errorText="title is required (8 - 191 characters)"
                       onInput={inputHandler}
                       initialValue={formState.inputs.title.value}
@@ -211,6 +224,50 @@ const MovieItem = () => {
                       onInput={inputHandler}
                       initialValue={formState.inputs.limit.value}
                       initialValid={formState.inputs.limit.isValid}
+                    />
+                    <Input
+                      element="input"
+                      id="matching"
+                      type="number"
+                      label="Matching rate"
+                      validators={[]}
+                      errorText=""
+                      onInput={inputHandler}
+                      initialValue={formState.inputs.matching.value}
+                      initialValid={formState.inputs.matching.isValid}
+                    />
+                    <Input
+                      element="input"
+                      id="casting"
+                      type="text"
+                      label="Casting"
+                      validators={[VALIDATOR_REQUIRE()]}
+                      errorText="Casting is required!"
+                      onInput={inputHandler}
+                      initialValue={formState.inputs.casting.value}
+                      initialValid={formState.inputs.casting.isValid}
+                    />
+                    <Input
+                      element="input"
+                      id="label"
+                      type="text"
+                      label="Movie label"
+                      validators={[]}
+                      errorText=""
+                      onInput={inputHandler}
+                      initialValue={formState.inputs.label.value}
+                      initialValid={formState.inputs.label.isValid}
+                    />
+                    <Input
+                      element="input"
+                      id="warning"
+                      type="text"
+                      label="Movie warning"
+                      validators={[]}
+                      errorText=""
+                      onInput={inputHandler}
+                      initialValue={formState.inputs.warning.value}
+                      initialValid={formState.inputs.warning.isValid}
                     />
                     <Input
                       element="select"

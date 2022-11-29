@@ -63,6 +63,10 @@ const User = (props) => {
         value: user.membership,
         isValid: true,
       },
+      admin: {
+        value: `${user.isAdmin}`,
+        isValid: true,
+      },
       bio: {
         value: user.bio,
         isValid: true,
@@ -89,6 +93,8 @@ const User = (props) => {
           username: formState.inputs.username.value,
           fname: formState.inputs.fname.value,
           lname: formState.inputs.lname.value,
+          membership: formState.inputs.membership.value,
+          isAdmin: formState.inputs.admin.value,
           bio: formState.inputs.bio.value,
           profileImg: {
             file: formState.inputs.profileImg.value.file,
@@ -232,13 +238,28 @@ const User = (props) => {
                     id="membership"
                     label="Membership"
                     validators={[VALIDATOR_REQUIRE()]}
-                    errorText="wwhat type of membership?"
+                    errorText="what type of membership?"
                     onInput={inputHandler}
                     initialValue={formState.inputs.membership.value}
                     initialValid={formState.inputs.membership.isValid}
                   >
                     <option value="standard">Standard</option>
                     <option value="premium">Premium</option>
+                  </Input>
+                </div>
+                <div className="user-update-item">
+                  <Input
+                    element="select"
+                    id="admin"
+                    label="Is Admin?"
+                    validators={[VALIDATOR_REQUIRE()]}
+                    errorText="Is the user an admin?"
+                    onInput={inputHandler}
+                    initialValue={formState.inputs.admin.value}
+                    initialValid={formState.inputs.admin.isValid}
+                  >
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
                   </Input>
                 </div>
               </div>

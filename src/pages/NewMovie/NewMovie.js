@@ -43,6 +43,22 @@ const NewMovie = () => {
         value: "",
         isValid: false,
       },
+      casting: {
+        value: "",
+        isValid: true,
+      },
+      label: {
+        value: "",
+        isValid: true,
+      },
+      warning: {
+        value: "",
+        isValid: true,
+      },
+      matching: {
+        value: "",
+        isValid: true,
+      },
       isSeries: {
         value: false,
         isValid: true,
@@ -248,6 +264,58 @@ const NewMovie = () => {
               validators={[VALIDATOR_REQUIRE()]}
               errorText="limit type is required!"
               onInput={inputHandler}
+            />
+          </div>
+          <div className="addProductItem">
+            <Input
+              element="input"
+              id="matching"
+              type="number"
+              label="Matching rate"
+              validators={[]}
+              errorText=""
+              onInput={inputHandler}
+              initialValue={formState.inputs.matching.value}
+              initialValid={formState.inputs.matching.isValid}
+            />
+          </div>
+          <div className="addProductItem">
+            <Input
+              element="input"
+              id="casting"
+              type="text"
+              label="Casting"
+              validators={[VALIDATOR_REQUIRE()]}
+              errorText="Casting is required!"
+              onInput={inputHandler}
+              initialValue={formState.inputs.casting.value}
+              initialValid={formState.inputs.casting.isValid}
+            />
+          </div>
+          <div className="addProductItem">
+            <Input
+              element="input"
+              id="label"
+              type="text"
+              label="Movie label"
+              validators={[]}
+              errorText=""
+              onInput={inputHandler}
+              initialValue={formState.inputs.label.value}
+              initialValid={formState.inputs.label.isValid}
+            />
+          </div>
+          <div className="addProductItem">
+            <Input
+              element="input"
+              id="warning"
+              type="text"
+              label="Movie warning"
+              validators={[]}
+              errorText=""
+              onInput={inputHandler}
+              initialValue={formState.inputs.warning.value}
+              initialValid={formState.inputs.warning.isValid}
             />
           </div>
           <div className="addProductItem">
