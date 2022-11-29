@@ -44,6 +44,7 @@ After signing in successfully, explore all visual graphs, cards, and boards for 
   + **express** for building web framework, **express-validator** for handling and validating input data sent from client-side.
   + **body-parser** for parsing request data.
   + **helmet** for setting up header security.
+  + **compression** to compress size.
   + **jsonwebtoken**, **bcrypt** for creating authToken and hashing user's password.
   + **validator** for validating input data into mongoose schema.
 
