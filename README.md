@@ -5,7 +5,7 @@
 <br>
 
 ## Why build this project?
-Grasping the concept of the actual dashboard app, [Dashboard/ Netflix Dashboard App](https://netflix-dashboard-app.web.app/login) was built with a modern and simplistic, UI for more convenient data observation, analysis and some fundamental operations of an admin app. It incorporated all the underlying traits of a full-stack MERN application and only used as a personal project. This app is completely optimized for computers, and responsive features for mobile devices are going to be integrated in the future. This app will visualize the overall analytic view for the developers.
+Grasping the concept of the actual dashboard app, [Dashboard/ Netflix Dashboard App](https://netflix-dashboard-app.web.app/login) was built with a modern and simplistic, UI for more convenient data observation, analysis and some fundamental operations of an admin app. It incorporated all the underlying traits of a full-stack MERN application and only used as a personal project. This app is completely optimized for computers, and responsive features for mobile devices are going to be integrated in the future. It will visualize the overall analytic view for the developers.
 
 ## Features
 1. Display an overall view including an analytic graph of yearly registered users and multiple statistical cards and boards.
