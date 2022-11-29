@@ -1,11 +1,11 @@
 <div align="center">
-  <h1> <img src="https://github.com/JohnnyDiep1021/Dashboard-App/blob/main/img/dashboard-logo48.png?raw=true" alt="Netflix logo"/> Dashboard App</h1>
-  <strong>An app simulates the actual dashboard/ admin app, used to monitor, manage and accummulate data statistics from Netflix Clone app </strong><br>
+  <h1> <img src="https://github.com/JohnnyDiep1021/Dashboard-App/blob/main/img/dashboard-logo48.png?raw=true" alt="Dashboard logo"/>Dashboard App</h1>
+  <strong>An app simulates the actual dashboard/ admin app, used to monitor, manage and accumulate  data statistics from Netflix Clone app</strong><br>
 </div>
 <br>
 
 ## Why build this project?
-Grasping the concept of the actual dashboard app, [Dashboard/ Netflix Dashboard App](https://netflix-dashboard-app.web.app/login) was built with a modern and simplistic, UI for more convenient data observation and analysis and some fundamental operations of an admin app. It was incorporated all the underlying traits of a full-stack MERN application and only used as a personal project. This app is completely optimized for computers, and responsive features for mobile devices are going to be integrated in the future. This app will visualize the overall analytic view for the developers.
+Grasping the concept of the actual dashboard app, [Dashboard/ Netflix Dashboard App](https://netflix-dashboard-app.web.app/login) was built with a modern and simplistic, UI for more convenient data observation, analysis and some fundamental operations of an admin app. It incorporated all the underlying traits of a full-stack MERN application and only used as a personal project. This app is completely optimized for computers, and responsive features for mobile devices are going to be integrated in the future. It will visualize the overall analytic view for the developers.
 
 ## Features
 1. Display an overall view including an analytic graph of yearly registered users and multiple statistical cards and boards.
@@ -39,11 +39,12 @@ After signing in successfully, explore all visual graphs, cards, and boards for 
 
 2) ### Backend:
 - Featured by RESTful APIs and implemented by MongoDB, ExpressJs, and NodeJs. Using:
-  + **mongodb**, **mongoose** for user data storage.
+  + **mongodb**, **mongoose** for data storage.
   + **cors** for setting up cross-site resource sharing permissions.
   + **express** for building web framework, **express-validator** for handling and validating input data sent from client-side.
   + **body-parser** for parsing request data.
   + **helmet** for setting up header security.
+  + **compression** to compress size.
   + **jsonwebtoken**, **bcrypt** for creating authToken and hashing user's password.
   + **validator** for validating input data into mongoose schema.
 
