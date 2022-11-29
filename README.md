@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> <img src="https://github.com/JohnnyDiep1021/Dashboard-App/blob/main/img/dashboard-logo48.png?raw=true" alt="Netflix logo"/> Dashboard App</h1>
+  <h1> <img src="https://github.com/JohnnyDiep1021/Dashboard-App/blob/main/img/dashboard-logo48.png?raw=true" alt="Dashboard logo"/>Dashboard App</h1>
   <strong>An app simulates the actual dashboard/ admin app, used to monitor, manage and accummulate data statistics from Netflix Clone app </strong><br>
 </div>
 <br>
