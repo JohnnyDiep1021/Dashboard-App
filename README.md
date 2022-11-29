@@ -39,7 +39,7 @@ After signing in successfully, explore all visual graphs, cards, and boards for 
 
 2) ### Backend:
 - Featured by RESTful APIs and implemented by MongoDB, ExpressJs, and NodeJs. Using:
-  + **mongodb**, **mongoose** for user data storage.
+  + **mongodb**, **mongoose** for data storage.
   + **cors** for setting up cross-site resource sharing permissions.
   + **express** for building web framework, **express-validator** for handling and validating input data sent from client-side.
   + **body-parser** for parsing request data.
