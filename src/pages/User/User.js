@@ -114,9 +114,9 @@ const User = (props) => {
     <div className="user-container">
       <div className="user-title-container">
         <h1 className="user-title">User Information</h1>
-        <Button className="user-btn-add" to="/newUser">
+        {/* <Button className="user-btn-add" to="/newUser">
           Create
-        </Button>
+        </Button> */}
       </div>
       <div className="user-control-container">
         {/* <div className="user-show-container">

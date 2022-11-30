@@ -10,7 +10,7 @@ import Home from "./pages/Home/Home";
 
 import UserList from "./pages/UserList/UserList";
 import User from "./pages/User/User";
-import NewUser from "./pages/NewUser/NewUser";
+// import NewUser from "./pages/NewUser/NewUser";
 
 import List from "./pages/List/List";
 import ListItem from "./pages/ListItem/ListItem";
@@ -41,9 +41,9 @@ function App() {
             <Route path="/users/:userId">
               <User />
             </Route>
-            <Route path="/newUser">
+            {/* <Route path="/newUser">
               <NewUser />
-            </Route>
+            </Route> */}
             <Route path="/movies" exact>
               <MovieList />
             </Route>
