@@ -25,7 +25,7 @@ Only administrators are allowed to access the **Dashboard app**:
 After signing in successfully, explore all visual graphs, cards, and boards for more statiscal information about users and movies.
   
 ## Technologies
-1) ### Frontend:
+1) ### Frontend
 - **Dashboard App** is a single-page application (SPA), constructed from ReactJS. Using:
   + **Custom hooks** manages form data input, sending requests, and authentication.
   + **react-router-dom** is used to simulate multi-page applications.
@@ -37,7 +37,7 @@ After signing in successfully, explore all visual graphs, cards, and boards for 
   + **@mui/x-data-grid** is used to create tabular data grid managing user and movie's data.
 - **The user interface** is simplistic, modern and designed based on the framework and structure of an admin/ dashboard app.
 
-2) ### Backend:
+2) ### Backend
 - Featured by RESTful APIs and implemented by MongoDB, ExpressJs, and NodeJs. Using:
   + **mongodb**, **mongoose** for data storage.
   + **cors** for setting up cross-site resource sharing permissions.
