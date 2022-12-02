@@ -67,7 +67,7 @@ const MovieList = () => {
         );
       },
     },
-    { field: "genre", headerName: "Genre", width: 150 },
+    { field: "genre", headerName: "Genre", width: 250 },
     { field: "year", headerName: "Year", width: 150 },
     { field: "limit", headerName: "Limit", width: 150 },
     { field: "isSeries", headerName: "isSeries", width: 150 },
